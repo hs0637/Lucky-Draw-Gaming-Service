@@ -25,7 +25,7 @@ Code Flow:
 12. For choice 4:List all the Previous Winners in the Last Week we call previous_winners()
 13. In previous_winners(), we get the details and display from the winners table having date between today's date and date 7 day's earlier
 14. For choice 5:Find out winner of Today's Event call calculate_winner()
-15. In calculate_winner(), we first whether we have already found out today's winner but checking the no. of rows in winner table having event_date as today, if no then we get the details of user having event_date as today from participants table, and take a random user from the it to be crowned as winner, we the get the prize of today's event from upcoming_events having event_date as today, then we add this entry to winners table, If the record is present then we display it.
+15. In calculate_winner(), we first whether we have already found out today's winner but checking the no. of rows in winner table having event_date as today, if no then we get the details of user having event_date as today from participants table, and take a random user from the it to be crowned as winner, we the get the prize of today's event from upcoming_events having event_date as today, then we add this entry to winner table, If the record is present then we display it.
 16. For choice 6:Exit we set the f value as 1, due to which the program exits
 17. If user enters any other choice then we ask him to give a valid choice.
 
