@@ -8,7 +8,7 @@ cur = conn.cursor()
 
 #global variables
 d = dt.datetime.now()
-d1 = dt.timedelta(days=6)
+d1 = dt.timedelta(days=7)
 d2 = d-d1
 
 #main function
@@ -20,14 +20,14 @@ def main():
         print("What would you like to do today?")
         print("1. Buy Tickets")
         print("2. Display List of Upcoming Events and Prizes")
-        print("3. Participate in Event")
-        print("4. List all the Previous Winners in the Last Week")
-        print("5. Find out winner of Today's Event")
-        print("6. Exit")
+        print("3. Participate in Event.")
+        print("4. List all the Previous Winners in the last 7 days.")
+        print("5. Find out winner of Today's Event.")
+        print("6. Exit.")
         print("")
         option = input('Please Enter your Option: ')
         if option == '1':
-            get_tickets()
+            gtickets()
         elif option == '2':
             display_event()
         elif option == '3':
@@ -44,7 +44,7 @@ def main():
     print("Thanks for Playing!")
 
 #Function to buy tickets(Option no. 1)
-def get_tickets():
+def gtickets():
     tickets = []
     cur.execute('Select max(user_id) from get_tickets')
     userid = cur.fetchone()
